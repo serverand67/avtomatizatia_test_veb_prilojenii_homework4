@@ -10,3 +10,4 @@ def auth_token():
 
     result = requests.post(url=data['url1'], data={"username": data['username'], "password": data['password']})
     return result.json()["token"]
+

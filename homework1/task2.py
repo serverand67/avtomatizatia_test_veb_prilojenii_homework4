@@ -18,26 +18,26 @@
 # {'data': [{'id': 88640, 'title': 'Steven', 'description': 'Description', 'content': 'Content', 'authorId': 14698, 'mainImage': {'id': None, 'cdnUrl': ''}, 'updatedAt': '2023-11-22T23:54:10+00:00', 'createdAt': '2023-11-22T23:54:10+00:00', 'labels': [], 'delayPublishTo': None, 'draft': False}
 
 
-# import requests
-# import yaml
-#
-# with open(r'C:\Users\NiKa\PycharmProjects\avtomatizatia_test_veb_prilojenii\homework1\config.yaml') as f:
-#     data = yaml.safe_load(f)
-#
-# # url1 = "https://test-stand.gb.ru/gateway/login"
-# # login = "kitty89"
-# # password = "61d96a3985"
-# # url2 = "https://test-stand.gb.ru/api/posts"
-#
-# # result = requests.post(url=url1, data={"username": login, "password": password})
-# # token = result.json()["token"]
-# # res_get = requests.get(url=url2, headers={"X-Auth-Token": token}, params={"owner": "notMe"})
-#
-#
-# result = requests.post(url=data['url1'], data={"username": data['username'], "password": data['password']})
+import requests
+import yaml
+
+with open(r'C:\Users\NiKa\PycharmProjects\avtomatizatia_test_veb_prilojenii\homework1\config.yaml') as f:
+    data = yaml.safe_load(f)
+
+# url1 = "https://test-stand.gb.ru/gateway/login"
+# login = "kitty89"
+# password = "61d96a3985"
+# url2 = "https://test-stand.gb.ru/api/posts"
+
+# result = requests.post(url=url1, data={"username": login, "password": password})
 # token = result.json()["token"]
-#
-# res_get = requests.get(url=data['url2'], headers={"X-Auth-Token": token}, params={"owner": "notMe"})
-#
-# print(res_get)
-# print(res_get.json())
+# res_get = requests.get(url=url2, headers={"X-Auth-Token": token}, params={"owner": "notMe"})
+
+
+result = requests.post(url=data['url1'], data={"username": data['username'], "password": data['password']})
+token = result.json()["token"]
+
+res_get = requests.get(url=data['url2'], headers={"X-Auth-Token": token}, params={"owner": "notMe"})
+
+print(res_get)
+print(res_get.json())
