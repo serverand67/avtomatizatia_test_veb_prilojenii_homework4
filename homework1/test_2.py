@@ -17,3 +17,4 @@ def test_check_post_title(auth_token):
     post_titles = [post["title"] for post in res_json["data"]]
     assert data["title"] in post_titles
 
+
