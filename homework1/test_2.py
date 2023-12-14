@@ -7,7 +7,6 @@ with open(r'C:\Users\NiKa\PycharmProjects\avtomatizatia_test_veb_prilojenii\home
     data = yaml.safe_load(f)
 
 
-
 def test_check_post_title(auth_token):
     res_get = requests.get(url=data['url2'], headers={"X-Auth-Token": auth_token}, params={"owner": "notMe"})
     res_json = res_get.json()
