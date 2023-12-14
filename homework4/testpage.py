@@ -143,7 +143,7 @@ class OperationsHelper(BasePage):
         return self.get_text_from_element(TestSearchLocators.ids["LOCATOR_RESULT_SWITCHIHG_TO_FORM"],
                                           description="result - word -Contact us!")
 
-    # #  функция вывода  текста в alert -  Form successfully submitted    -  моя функция
+    # #  функция вывода  текста в alert -  Form successfully submitted
     def get_alert_text(self):
         alert_field = self.driver.switch_to.alert
         text = alert_field.text
